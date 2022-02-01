@@ -1,0 +1,93 @@
+h1.heading {
+  font-size: 13.1rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 8rem 0 1.5rem 0;
+  color: #fff;
+
+  @media only screen and (max-width: $tab-land){
+    font-size: 8.5rem;
+  }
+  @media only screen and (max-width: $mbl-land){
+    font-size: 6.7rem;
+  }
+
+}
+
+h2.heading {
+  font-size: 9.3rem;
+  font-weight: 800;
+
+  @media only screen and (max-width: $tab-land){
+    font-size: 7.5rem;
+  }
+  @media only screen and (max-width: $mbl-land){
+    font-size: 5.7rem;
+  }
+}
+
+h4.heading {
+  font-size: 2.8rem;
+  color: $color-white;
+  text-align: center;
+  font-weight: 600;
+  color: $color-white;
+}
+
+h3.heading {
+  font-size: 5rem;
+  color: $color-white;
+  font-weight: 700;
+  color: $color-white;
+}
+
+.p__text {
+  font-size: 1.6rem;
+  color: $color-white;
+  margin-bottom: 3rem;
+}
+
+.line{
+  height: 3px;
+  width: 44.7rem;
+  background-color: $color-primary
+}
+
+.headline{
+  margin-bottom: 12rem;
+}
+
+// Typography utils
+
+.block {
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.marginXAuto{
+  margin: 0 auto;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+@mixin img-size {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin icon-vector {
+  height: 2rem;
+  width: 2rem;
+}

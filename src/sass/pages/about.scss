@@ -1,0 +1,78 @@
+.about-section {
+  height: 100rem;
+  background-image: url(../img/about-bg.png);
+  //   transform: translateY(-55rem);
+  margin-top: -55rem;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 8rem;
+  position: relative;
+
+  @media only screen and (max-width: $laptop-land) {
+    height: 135rem;
+    margin-top: -65rem;
+  }
+  @media only screen and (max-width: $mbl-port) {
+    margin-top: -83rem;
+    //       height: 145rem;
+  }
+  @media only screen and (max-width: $mbl-small) {
+    margin-top: -96rem;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0 10rem;
+
+  @media only screen and (max-width: $laptop-land) {
+    flex-direction: column;
+    gap: 5rem 0;
+  }
+
+  &__img {
+    width: 44rem;
+    height: 48.8rem;
+
+    @media only screen and (max-width: $mbl-port) {
+      width: 34rem;
+      height: 38.8rem;
+    }
+
+    img {
+      @include img-size;
+    }
+  }
+
+  @media only screen and (max-width: $laptop-land) {
+    &__content,
+    .p__text {
+      text-align: center;
+    }
+
+    .line,
+    .btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+.about-ractangle {
+  position: absolute;
+  top: 39%;
+  right: 0;
+  transform: rotate(29deg);
+  //   height: 248.29px;
+  //   width: 111.18px;
+
+  @media only screen and (max-width: $laptop-land) {
+    display: none;
+  }
+}

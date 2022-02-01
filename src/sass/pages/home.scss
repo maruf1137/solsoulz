@@ -1,0 +1,81 @@
+.home {
+  background-image: url(../img/home-bg.jpg);
+  background-image: url(../img/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 129rem;
+  min-height: 100vh;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__nav {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &__center {
+    position: relative;
+  }
+
+  &__shape--1 {
+    height: 62.5rem;
+    width: 62.5rem;
+    background-image: radial-gradient(
+      49.94% 49.95% at 49.9% 49.94%,
+      #bcbec0 5%,
+      #bcbec0 77%,
+      #9b9d9e 77.01%,
+      #777879 79%,
+      #575758 81%,
+      #3b3c3d 82%,
+      #252626 84%,
+      #151515 86%,
+      #090909 88%,
+      #020202 91%,
+      #000000 100%
+    );
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+
+    @media only screen and (max-width: $mbl-port) {
+      height: 50.5rem;
+      width: 50.5rem;
+    }
+    @media only screen and (max-width: $mbl-small) {
+      height: 36.5rem;
+      width: 36.5rem;
+    }
+  }
+
+  &__img {
+    height: 68rem;
+    width: 68rem;
+    margin: 2rem auto 0 auto;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (max-width: $mbl-port) {
+      height: 44rem;
+      width: 44rem;
+    }
+    @media only screen and (max-width: $mbl-small) {
+      height: 34rem;
+      width: 34rem;
+    }
+
+
+
+    img {
+      @include img-size;
+    }
+  }
+}

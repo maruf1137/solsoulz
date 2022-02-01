@@ -1,0 +1,81 @@
+.owl-carousel .owl-nav.disabled {
+  display: block;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  background-color: $color-primary;
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: -8rem;
+
+  @media only screen and (max-width: 100em) {
+    left: -4rem;
+  }
+  @media only screen and (max-width: $mbl-small) {
+    left: 0;
+  }
+}
+.owl-carousel .owl-nav button.owl-next {
+  right: -8rem;
+  @media only screen and (max-width: 100em) {
+    right: -4rem;
+  }
+  @media only screen and (max-width: $mbl-small) {
+    right: 0;
+  }
+}
+
+.owl-nav {
+  .owl-prev,
+  .owl-next {
+    //     height: 4.5rem;
+    //     width: 4.5rem;
+    //     background-color: $color-primary;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+  }
+  .owl-prev {
+  }
+
+  svg {
+    fill: #fff;
+    height: 3.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+.owl-carousel {
+}
+
+.item {
+  //   position: relative;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: $color-primary;
+  color: $color-white;
+  text-decoration: none;
+}
+
+// .owl-carousel .owl-nav.disabled {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   display: flex;
+// }
+
+// nevigation
