@@ -95,6 +95,13 @@ about.addEventListener('click', function(){
   window.scrollTo(0, 1095)
 })
 
-window.addEventListener('scroll', function () {
-  // console.log(window.scrollY);
+
+window.addEventListener('scroll', ()=>{
+  const navContainer = document.querySelector('.home__nav')
+  if(window.scrollY >= 100){
+    console.log(window.scrollY);
+    navContainer.classList.add('sticky')
+  }else{
+    navContainer.classList.remove('sticky')
+  }
 })

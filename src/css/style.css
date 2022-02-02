@@ -1054,7 +1054,7 @@ a:hover {
     left: 0;
     height: 100vh;
     width: 60%;
-    background: #FF0011;
+    background: #660000;
     z-index: 5;
     flex-direction: column;
     padding-top: 16rem;
@@ -1072,12 +1072,16 @@ a:hover {
 }
 .nav__link {
   font-size: 2.2rem;
-  color: #fff;
+  color: #ffffff91;
+  transition: all 0.3s;
 }
 @media only screen and (max-width: 62em) {
   .nav__link {
     font-size: 3.5rem;
   }
+}
+.nav__link:hover {
+  color: #fff;
 }
 .nav__social {
   display: flex;
@@ -1156,6 +1160,19 @@ a:hover {
 }
 .show-mbl-nav .close-btn {
   display: block;
+}
+
+.home__nav {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #660000;
+  z-index: 5;
 }
 
 .owl-carousel .owl-nav.disabled {
@@ -1246,9 +1263,6 @@ a:hover {
 }
 .home::-webkit-scrollbar {
   display: none;
-}
-.home__nav {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 .home__center {
   position: relative;
@@ -1430,35 +1444,36 @@ a:hover {
 .roadmap::after {
   content: "";
   display: block;
-  width: 18.5rem;
+  width: 20.5rem;
   background-image: url(../img/roadmap-line.png);
   background-size: cover;
   background-position: top center;
-  height: 108.3rem;
+  height: 136.3rem;
   position: absolute;
   top: -12rem;
   left: 50%;
   transform: translateX(-50%);
 }
-@media only screen and (max-width: 1458em) {
+@media only screen and (max-width: 91.125em) {
   .roadmap::after {
-    height: 113.3rem;
+    height: 145.3rem;
     top: -5rem;
+    width: 21.5rem;
   }
 }
 @media only screen and (max-width: 75em) {
   .roadmap::after {
-    height: 113.3rem;
+    height: 149.3rem;
     top: -5rem;
   }
 }
 @media only screen and (max-width: 64em) {
   .roadmap::after {
-    height: 134.3rem;
+    height: 165.3rem;
     top: -7rem;
   }
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 62em) {
   .roadmap::after {
     display: none;
   }
@@ -1487,7 +1502,7 @@ a:hover {
     transform: translate(0);
   }
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 62em) {
   .roadmap__item:nth-child(odd) {
     grid-column: 1/-1;
     padding-right: 0;
@@ -1512,7 +1527,7 @@ a:hover {
     transform: translate(0);
   }
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 62em) {
   .roadmap__item:nth-child(even) {
     grid-column: 1/-1;
     padding-left: 0;
@@ -1521,7 +1536,7 @@ a:hover {
 .roadmap__content {
   padding: 0 5rem;
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 62em) {
   .roadmap__content {
     padding: 0 2rem;
   }

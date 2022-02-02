@@ -32,7 +32,7 @@
       left: 0;
       height: 100vh;
       width: 60%;
-      background: $color-primary;
+      background: $color-secondary;
       z-index: 5;
       flex-direction: column;
       padding-top: 16rem;
@@ -50,10 +50,15 @@
 
   &__link {
     font-size: 2.2rem;
-    color: $color-white;
+    color: #ffffff91;
+    transition: all .3s;
 
     @media only screen and (max-width: $tab-land) {
       font-size: 3.5rem;
+    }
+
+    &:hover{
+      color: $color-white;
     }
   }
 
@@ -144,4 +149,18 @@
   .close-btn{
     display: block;
   }
+}
+
+.home__nav {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sticky{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-secondary;
+    z-index: 5;
+
 }
