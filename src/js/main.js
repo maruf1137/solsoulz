@@ -61,10 +61,31 @@ btns.forEach(function (btn) {
 });
 
 // mobile nav
+
+const navItem =  document.querySelectorAll('.nav__item')
 const mblNavBtn =  document.querySelector('.nav-bar-btns')
 const navContainer = document.querySelector('.home__nav')
+const openBtn = document.querySelector(".open-btn")
+const closeBtn = document.querySelector(".close-btn")
 
-mblNavBtn.addEventListener('click', function () {
-  navContainer.classList.toggle('show-mbl-nav')
-  mblNavBtn.classList.toggle('show-mbl-nav')
+function openNav() {
+  navContainer.classList.add('show-mbl-nav')
+  mblNavBtn.classList.add('show-mbl-nav')
+}
+function closeNav() {
+  navContainer.classList.remove('show-mbl-nav')
+  mblNavBtn.classList.remove('show-mbl-nav')
+}
+
+openBtn.addEventListener('click', function () {
+  openNav()
+})
+closeBtn.addEventListener('click', function () {
+  closeNav()
+})
+
+navItem.forEach(el=>{
+  el.addEventListener('click', function() {
+    closeNav()
+  })
 })
