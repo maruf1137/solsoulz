@@ -1164,7 +1164,7 @@ a:hover {
 
 .home__nav {
   background-color: rgba(255, 255, 255, 0.1);
-  transition: all 0.5s;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333);
 }
 
 .sticky {
@@ -1172,8 +1172,10 @@ a:hover {
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   background-color: #660000;
   z-index: 5;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333);
 }
 
 .owl-carousel .owl-nav.disabled {
