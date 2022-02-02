@@ -5,8 +5,8 @@
   padding: 0.5rem 0;
   max-width: 160rem;
   margin: 0 auto;
-  
-  @media only screen and (max-width: 90.625em) {
+
+  @media only screen and (max-width: 100em) {
     padding: 0 5rem;
   }
 
@@ -18,10 +18,36 @@
     }
   }
 
+  &__content {
+  }
+
   &__list {
     display: flex;
     align-items: center;
+    flex-direction: row;
     gap: 0 4rem;
+    transition: all .5s;
+
+    @media only screen and (max-width: $tab-land) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 60%;
+      background: $color-primary;
+      z-index: 5;
+      flex-direction: column;
+      padding-top: 16rem;
+      align-items: start;
+      padding-left: 8rem;
+      gap: 2rem;
+      transform: translateX(-100%);
+      transition: all .5s;
+    }
+
+    @media only screen and (max-width: $mbl-port){
+      width: 100%;
+    }
   }
 
   &__item {
@@ -30,18 +56,93 @@
   &__link {
     font-size: 2.2rem;
     color: $color-white;
+
+    @media only screen and (max-width: $tab-land) {
+      font-size: 3.5rem;
+    }
   }
 
   &__social {
     display: flex;
     align-items: center;
-
     gap: 0 4rem;
-  }
+    transition: all .3s;
 
+    @media only screen and (max-width: $tab-land) {
+      position: fixed;
+      bottom: 8%;
+      left: 8rem;
+      z-index: 5;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
   .icon {
     height: 2.8rem;
     width: 3.5rem;
     fill: $color-white;
+
+    @media only screen and (max-width: $tab-land) {
+      height: 4rem;
+        width: 5rem;
+    }
+  }
+}
+
+.open-btn {
+  position: fixed;
+  top: 2rem;
+  right: 5rem;
+  height: 5rem;
+  width: 5rem;
+  display: none;
+  z-index: 6;
+
+  @media only screen and (max-width: $tab-land) {
+    display: block;
+  }
+
+  img {
+    @include img-size;
+  }
+}
+
+.close-btn{
+  position: fixed;
+  top: 2rem;
+  right: 5rem;
+  height: 5rem;
+  width: 5rem;
+  display: none;
+  z-index: 6;
+
+  // @media only screen and (max-width: $tab-land) {
+  //   display: block;
+  // }
+
+  img {
+    @include img-size;
+  }
+}
+
+.show-mbl-nav {
+  .nav {
+    &__list {
+      transform: translateX(0);
+    }
+
+
+    &__social {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .open-btn{
+    display: none;
+  }
+  .close-btn{
+    display: block;
   }
 }

@@ -2,6 +2,30 @@
   background-color: $color-black;
   padding: 8rem 0;
   overflow: hidden;
+  position: relative;
+
+  .vector{
+    position: absolute;
+    height: 8.5rem;
+
+    @media only screen and (max-width: $laptop-land) {
+      display: none;
+    }
+  }
+
+  .vector-1{
+    top: 0;
+    left: 0;
+  }
+  .vector-2{
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .vector-3{
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .roadmap {
@@ -10,6 +34,11 @@
   align-items: center;
   gap: 5rem 6rem;
   position: relative;
+
+  @media only screen and (max-width: $tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 0;
+  }
 
   &::after {
     content: "";
@@ -36,12 +65,10 @@
       height: 134.3rem;
       top: -7rem;
     }
-
-    @media only screen and (max-width: $tab-land) {
-      width: 21.5rem;
-      height: 150.3rem;
-      top: -6rem;
+    @media only screen and (max-width: $tab-port) {
+      display: none;
     }
+
   }
 
   &__item {
@@ -69,6 +96,11 @@
         transform: translate(0);
       }
     }
+
+    @media only screen and (max-width: $tab-port) {
+      grid-column: 1/-1;
+      padding-right: 0;
+    }
   }
 
   &__item:nth-child(even) {
@@ -90,10 +122,19 @@
         transform: translate(0);
       }
     }
+
+    @media only screen and (max-width: $tab-port) {
+      grid-column: 1/-1;
+      padding-left: 0;
+    }
   }
 
   &__content {
     padding: 0 5rem;
+
+    @media only screen and (max-width: $tab-port) {
+      padding: 0 2rem;
+    }
   }
 
   .image-btn {

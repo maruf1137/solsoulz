@@ -1,0 +1,100 @@
+.find-section {
+  background-color: $color-black;
+  padding: 5rem 0;
+  position: relative;
+  margin-top: -1px;
+
+  .headline {
+    margin-bottom: 2.8rem !important;
+  }
+
+  .find-vector {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media only screen and (max-width: $laptop-land) {
+      display: none;
+    }
+  }
+}
+
+.find {
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0 20rem;
+
+  @media only screen and (max-width: 90em) {
+    gap: 16rem;
+  }
+  @media only screen and (max-width: $tab-land) {
+    gap: 14rem 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 42.3rem;
+    height: 42.7rem;
+
+    img {
+      @include img-size;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    @media only screen and (max-width: $tab-land) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    @media only screen and (max-width: $mbl-port) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0 0.8rem;
+  }
+
+  &__color {
+    height: 3.6rem;
+    width: 3.6rem;
+    display: block;
+
+    &--1 {
+      background-color: #d9206d;
+    }
+    &--2 {
+      background-color: #9624dc;
+    }
+    &--3 {
+      background-color: #204cea;
+    }
+    &--4 {
+      background-color: #d327a3;
+    }
+    &--5 {
+      background-color: #e0ab22;
+    }
+    &--6 {
+      background-color: #e0ab22;
+    }
+  }
+
+  &__text {
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding: 0.8rem;
+  }
+}
