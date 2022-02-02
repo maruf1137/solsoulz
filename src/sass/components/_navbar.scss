@@ -18,13 +18,12 @@
     }
   }
 
-
   &__list {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 0 4rem;
-    transition: all .5s;
+    transition: all 0.5s;
 
     @media only screen and (max-width: $tab-land) {
       position: fixed;
@@ -40,10 +39,10 @@
       padding-left: 8rem;
       gap: 2rem;
       transform: translateX(-100%);
-      transition: all .5s;
+      transition: all 0.5s;
     }
 
-    @media only screen and (max-width: $mbl-port){
+    @media only screen and (max-width: $mbl-port) {
       width: 100%;
     }
   }
@@ -51,13 +50,13 @@
   &__link {
     font-size: 2.2rem;
     color: #ffffff91;
-    transition: all .3s;
+    transition: all 0.3s;
 
     @media only screen and (max-width: $tab-land) {
       font-size: 3.5rem;
     }
 
-    &:hover{
+    &:hover {
       color: $color-white;
     }
   }
@@ -66,7 +65,7 @@
     display: flex;
     align-items: center;
     gap: 0 4rem;
-    transition: all .3s;
+    transition: all 0.3s;
 
     @media only screen and (max-width: $tab-land) {
       position: fixed;
@@ -77,7 +76,7 @@
       visibility: hidden;
     }
   }
-  
+
   .icon {
     height: 2.8rem;
     width: 3.5rem;
@@ -85,12 +84,12 @@
 
     @media only screen and (max-width: $tab-land) {
       height: 4rem;
-        width: 5rem;
+      width: 5rem;
     }
   }
 }
 
-.nav-bar-btns{
+.nav-bar-btns {
   cursor: pointer;
 }
 
@@ -112,7 +111,7 @@
   }
 }
 
-.close-btn{
+.close-btn {
   position: fixed;
   top: 2rem;
   right: 5rem;
@@ -136,31 +135,30 @@
       transform: translateX(0);
     }
 
-
     &__social {
       opacity: 1;
       visibility: visible;
     }
   }
 
-  .open-btn{
+  .open-btn {
     display: none;
   }
-  .close-btn{
+  .close-btn {
     display: block;
   }
 }
 
 .home__nav {
   background-color: rgba(255, 255, 255, 0.1);
+  transition: all .5s;
 }
 
-.sticky{
+.sticky {
   position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $color-secondary;
-    z-index: 5;
-
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-secondary;
+  z-index: 5;
 }
