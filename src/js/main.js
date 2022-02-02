@@ -89,3 +89,12 @@ navItem.forEach(el=>{
     closeNav()
   })
 })
+
+const about  = document.querySelector('.about-us')
+about.addEventListener('click', function(){
+  window.scrollTo(0, 1095)
+})
+
+window.addEventListener('scroll', function () {
+  // console.log(window.scrollY);
+})
